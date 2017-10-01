@@ -1,0 +1,21 @@
+{% extends 'login/index.html' %}
+
+{%  block content %}
+	<style>
+		.row{
+			margin-bottom: 30px;
+		}
+	</style>
+
+	<!-- Put Your Cards Here-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+				</div>
+				<div class="col-md-3">
+					{% include 'login/logout.html' %}
+				</div>
+			</div>
+		</div>
+{% endblock %}

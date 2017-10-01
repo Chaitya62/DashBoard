@@ -35,7 +35,10 @@ def login(request):
 
 
 def home(request, id):
-	return render(request,'login/landing_page.html',{"title": "Home", "id": id})
+	if(request.session['id']):
+		return render(request,'login/landing_page.html',{"title": "Home", "id": id})
+	else:
+		return redirect('/login')
 
 
 def logout(request):

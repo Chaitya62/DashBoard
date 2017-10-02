@@ -21,3 +21,8 @@ class Schedule(models.Model):
 	date = models.DateField(max_length=100)
 	endTime = models.DateTimeField(blank = True)
 	time = models.TimeField(max_length=100)
+
+class Announcement(models.Model):
+	def __str__(self):
+		return str(self.id)
+	text = models.CharField(max_length=500)

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from .forms import LoginForm
-from .models import Login, Schedule
+from .models import Login, Schedule, Announcement
 import bcrypt
 
 # Create your views here.
@@ -53,7 +53,8 @@ def login(request):
 def home(request, id):
 	if(request.session['id'] == id):
 		schedules = Schedule.objects.all()
-		return render(request,'login/landing_page.html',{"list": schedules, "title": "Home", "id": id, "team_name": request.session['username'], "team_repo": request.session['github_repo'], "username1": request.session['wifi_user_1'], "username2": request.session['wifi_user_2'], "password1": request.session['wifi_pass_1'], "password2": request.session['wifi_pass_2']})
+		announcements = Announcement.objects.all()
+		return render(request,'login/landing_page.html',{"announcements": announcements, "list": schedules, "title": "Home", "id": id, "team_name": request.session['username'], "team_repo": request.session['github_repo'], "username1": request.session['wifi_user_1'], "username2": request.session['wifi_user_2'], "password1": request.session['wifi_pass_1'], "password2": request.session['wifi_pass_2']})
 	else:
 		return redirect('/login/')
 

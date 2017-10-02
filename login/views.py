@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from .forms import LoginForm
-from .models import Login
+from .models import Login, Schedule
 import bcrypt
 
 # Create your views here.
 def schedule(request, waste_data):
-	return render(request, 'login/schedule.html', {"team_name": request.session['username'], "team_repo": request.session['github_repo']})
+	schedules = Schedule.objects.all()
+	return render(request, 'login/schedule.html', {"team_name": request.session['username'], "team_repo": request.session['github_repo'], "list": schedules})
 
 def rules(request, waste_data):
 	return render(request, 'login/rules-and-guidelines.html', {"team_name": request.session['username'], "team_repo": request.session['github_repo']})

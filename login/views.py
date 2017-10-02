@@ -31,7 +31,7 @@ def login(request):
 				if query.github_repo:
 					request.session['github_repo'] = query.github_repo
 				else:
-					request.session['github_repo'] = "#"
+					request.session['github_repo'] = "../"+id+"#"
 				request.session['wifi_user_1'] = query.wifi_username_1
 				request.session['wifi_user_2'] = query.wifi_username_2
 				request.session['wifi_pass_1'] = query.wifi_password_1

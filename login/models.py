@@ -5,3 +5,8 @@ from django.db import models
 class Login(models.Model):
 	username = models.CharField(max_length=250)
 	password = models.CharField(max_length=250)
+	github_repo = models.CharField(max_length=300, blank = True)
+	wifi_username_1 = models.CharField(max_length=250, default = 'Not Alloted')
+	wifi_username_2 = models.CharField(max_length=250, default = 'Not Alloted')
+	wifi_password_1 = models.CharField(max_length=250, default = 'Not Alloted')
+	wifi_password_2 = models.CharField(max_length=250, default = 'Not Alloted')

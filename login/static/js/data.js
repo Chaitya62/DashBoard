@@ -1,6 +1,6 @@
 var eventName = "KJSCE-HACK";
 var endDateTime = { year:2017,month:10,day:7, hour:15,minute:0};
-var introductionText = 'Welcome to the KJSCE-HACK dashboard! We hope you\'ll have fantastic couple of days of hacking here at KJ Somaiya College Of Engineering! We have added a bunch of information on this page. We will also continue to update this page with relevant information and links throughut the event.<br/><br/>Follow our community on Skillenza<a href="https://beta.skillenza.com/communities/hackkjsce" target="_blank"> here</a>';
+var introductionText = 'Welcome to the KJSCE-HACK dashboard! We hope you\'ll have fantastic couple of days of hacking here at KJ Somaiya College Of Engineering! We have added a bunch of information,some resources and will be making announcements on this page.We will also continue to update this page with relevant information and links throughout the event.<br/><br/>Follow our community on Skillenza<a href="https://beta.skillenza.com/communities/hackkjsce" target="_blank"> here</a>';
 /*
  * Navbar links
  *

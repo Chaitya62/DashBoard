@@ -54,7 +54,40 @@ font-family: 'Roboto Condensed', sans-serif;
 			<p class="main-intro-text" id="main-intro-text"></p>
 			<br/>
 			<h2>Announcements</h2>
-			<marquee behavior="scroll" direction="left" scrollamount="5" style="color:#337ab7;font-size:16px">{% for announcement in announcements %}<span>{{announcement.text}}</span>&emsp;{% endfor %}</marquee>
+			<div id="text-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+		    <div class="row">
+		        <div class="col-xs-offset-1 col-xs-10">
+		            <div class="carousel-inner">
+		                {% for announcement in announcements|slice:":1" %}
+		                <div class="item active">
+		                    <div class="carousel-content">
+		                    	<div>
+		                    		<p>{{announcement.text}}</p>
+		                    	</div>
+		                    </div>
+		                </div>
+		                {% endfor %}
+		                {% for announcement in announcements|slice:"1:" %}
+		                <div class="item">
+		                    <div class="carousel-content">
+		                    	<div>
+		                    		<p>{{announcement.text}}</p>
+		                    	</div>
+		                    </div>
+		                </div>
+		                {% endfor %}
+		            </div>
+		        </div>
+		    </div>
+		    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		 <a class="right carousel-control" href="#text-carousel" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+
+		</div>
 		</div>
 		<div class="col-sm-3">
 			<h2 class="wifi-title">Wifi Access</h2>

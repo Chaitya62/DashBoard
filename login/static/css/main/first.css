@@ -14,6 +14,13 @@
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
 }
+#text-carousel {
+  text-align: center;
+  font-size:17px;
+  color:#337ab7;
+  height: auto;
+  padding: 12px;
+}
 .cover-img{
 	width: 100%;
 }

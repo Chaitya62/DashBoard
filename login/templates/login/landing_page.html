@@ -54,7 +54,7 @@ font-family: 'Roboto Condensed', sans-serif;
 			<p class="main-intro-text" id="main-intro-text"></p>
 			<br/>
 			<h2>Announcements</h2>
-			<marquee behavior="scroll" direction="left" scrollamount="5" style="color:#337ab7;font-size:16px">{% for announcement in announcements %}<span>{{announcement.text}}</span>&emsp;{% endfor %}</marquee>
+			<marquee behavior="scroll" direction="left" scrollamount="5" style="color:#337ab7;font-size:16px">{% for announcement in announcements %}<span><span style="color:red;">&#9737;</span>{{announcement.text}}</span>&emsp;{% endfor %}</marquee>
 		</div>
 		<div class="col-sm-3">
 			<h2 class="wifi-title">Wifi Access</h2>

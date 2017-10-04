@@ -1,0 +1,6 @@
+*.pyc
+**/migrations/**
+dashboard/bin/**
+dashboard/lib/**
+dashboard/pip-selfcheck.json
+dashboard/include/**

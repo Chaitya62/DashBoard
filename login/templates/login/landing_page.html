@@ -59,24 +59,34 @@ font-family: 'Roboto Condensed', sans-serif;
 		    <div class="row">
 		        <div class="col-xs-offset-1 col-xs-10">
 		            <div class="carousel-inner">
-		                {% for announcement in announcements|slice:":1" %}
-		                <div class="item active">
-		                    <div class="carousel-content">
-		                    	<div>
-		                    		<p>{{announcement.text}}</p>
-		                    	</div>
-		                    </div>
-		                </div>
-		                {% endfor %}
-		                {% for announcement in announcements|slice:"1:" %}
-		                <div class="item">
-		                    <div class="carousel-content">
-		                    	<div>
-		                    		<p>{{announcement.text}}</p>
-		                    	</div>
-		                    </div>
-		                </div>
-		                {% endfor %}
+			            {% if announcements %}
+			                {% for announcement in announcements|slice:":1" %}
+				                <div class="item active">
+				                    <div class="carousel-content">
+				                    	<div>
+				                    		<p>{{announcement.text}}</p>
+				                    	</div>
+				                    </div>
+				                </div>
+				                {% endfor %}
+				                {% for announcement in announcements|slice:"1:" %}
+				                <div class="item">
+				                    <div class="carousel-content">
+				                    	<div>
+				                    		<p>{{announcement.text}}</p>
+				                    	</div>
+				                    </div>
+				                </div>
+			                {% endfor %}
+			            {% else %}
+			            	<div class="item active">
+			                    <div class="carousel-content">
+			                    	<div>
+			                    		<p>No announcements currently</p>
+			                    	</div>
+			                    </div>
+			                </div>
+			            {% endif %}
 		            </div>
 		        </div>
 		    </div>

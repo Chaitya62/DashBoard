@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from django.views.generic.base import RedirectView
+
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
 	url(r'^', include('login.urls'), name = "Login"),
+	url(r'^',include('landingPage.urls'), name="landingPage"),
+	url(r'^.*$', RedirectView.as_view(url='/', permanent=False), name='index')
 ]

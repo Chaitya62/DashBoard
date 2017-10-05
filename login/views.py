@@ -3,11 +3,12 @@ from django.http import HttpResponse,HttpResponseRedirect
 from .forms import LoginForm
 from .models import Login, Schedule, Announcement
 import bcrypt
+from datetime import datetime
 
 # Create your views here.
 def schedule(request, waste_data):
 	schedules = Schedule.objects.all()
-	return render(request, 'login/schedule.html', {"list": schedules, "team_name": request.session['username'], "team_repo": request.session['github_repo']})
+	return render(request, 'login/schedule.html', {"time": datetime.now().replace(microsecond=0), "list": schedules, "team_name": request.session['username'], "team_repo": request.session['github_repo']})
 
 def rules(request, waste_data):
 	return render(request, 'login/rules-and-guidelines.html', {"team_name": request.session['username'], "team_repo": request.session['github_repo']})

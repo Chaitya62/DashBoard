@@ -40,7 +40,7 @@ var quickLinks = [
 	{
 		"name" : "KJSCE-HACK",
 		"about" : "Main Website Of Hackathon",
-		"link" : "http://kjsce-hackathon.tech/"
+		"link" : "/"
 	},
 	{
 		"name" : "KJSCE-abhiyantriki",

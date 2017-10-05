@@ -15,36 +15,50 @@
 </head>
 <body>
 <span id="devpost-submission-area"></span>
-
-<div class="navbar-wrapper">
-	<div class="container-fluid">
-		<div class="row navbar-row">
-			<div class="col-sm-12">
-
-				<img src="{% static 'img/ttlogo.png' %}" class="navbar-logo">
-				<p class="navbar-item-wrapper">
-					<a href="../" class="navbar-item"><b>KJSCE-HACK</b></a>
-					<a href="{{team_repo}}" target="_blank" class="navbar-item" id="navbar-t-github-link">{{team_name}}</a>
-					<a href="#" target="_blank" class="navbar-item" id="navbar-o-github-link">Github(Organisation)</a>
-					<a href="#" target="_blank" class="navbar-item" id="navbar-hacker-board-link">Hacker-Board</a>
-					<!--<a href="#devpost" target="_blank" class="navbar-item" id="navbar-devpost-link">DevPost</a>
-					<a href="#helpq" class="navbar-item" id="navbar-helpq-link">HELPq</a>
-					<a href="./mentors" class="navbar-item">Mentors</a> -->
-					<a href="../rules/" class="navbar-item">Rules</a>
-					<a href="../schedule/" class="navbar-item">Schedule</a>
-				</p>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-
+<nav class="navbar" style="background: #eee;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#"><img id="logo" src=""></a> -->
+      <a class="navbar-brand" href="index.html" id="logo"><img src="{% static 'img/ttlogo.png' %}" id="logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="{{team_repo}}">{{team_name}}</a></li>
+        <li><a target="_blank" href="https://github.com/kjsce-hackathon">Github(KJSCE-HACK)</a></li>
+        <li><a target="_blank" href="http://kjscecodecell.com/hackerboard/">Hacker Board</a></li>
+        <li><a href="./rules/">Rules</a></li>
+        <li><a href="./schedule/">Schedule</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+        <li><a href="./logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
 <div class="container">
 	<div class="row rules-row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<h2>Code of Conduct</h2>
-			<span id="rules-area"></span>
+			<span id="rules-area">
+				<ul>
+					<li> ‌The level of prerequisites done by the participants should just include the theory behind your idea, APIs and softwares to be used, and not the actual code!</li>
+					<li> ‌Use of libraries and tools is allowed and encouraged</li>
+					<li> ‌Judging criteria-Technology, design, completion and learning</li>
+					<li> ‌Outside assistance not allowed. We will be having mentors who will be assisting you throughout the day.</li>
+					<li> ‌Teams are encouraged to co-operate with each other</li>
+					<li> ‌Bringing IDs is compulsory for participants</li>
+					<li> ‌All work must be original. Code used during the --Hackathon must be written during the designated contest period.</li>
+					<li> ‌Copying or cheating is strictly not allowed.</li>
+					<li> ‌Anyone who doesn't follow the Code of Conduct will be disqualified.</li>
+				</ul>
+			</span>
 		</div>
 	</div>
 	<!--

@@ -1,11 +1,11 @@
 $(document).ready(function(){
-
 	var pastEventsHTML = '';
 	var upcomingEventsHTML = '';
 	for(var i = 0;i < schedule.length;i++){
 		var scheduleItem = schedule[i];
 
 		if(s < scheduleItem['eventEndTime']){
+			console.log(scheduleItem['eventEndTime']);
 			//upcoming events
 			upcomingEventsHTML += '<tr><td>' + scheduleItem['name'] + '</td><td>' + scheduleItem['location'] + '</td><td>' + scheduleItem['dateDisplayed'] + '</td><td>' + scheduleItem['timeDisplayed'] + '</td></tr>';
 		}else{

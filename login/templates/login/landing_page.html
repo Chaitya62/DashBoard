@@ -20,29 +20,33 @@
 <body>
 <span id="devpost-submission-area"></span>
 
-
-<div class="navbar-wrapper">
-	<div class="container-fluid">
-		<div class="row navbar-row">
-			<div class="col-sm-12">
-
-				<img src="{% static 'img/ttlogo.png' %}" class="navbar-logo">
-
-				<p class="navbar-item-wrapper">
-					<a href="." class="navbar-item"><b>KJSCE-HACK</b></a>
-					<a href="{{team_repo}}" target="_blank" class="navbar-item" id="navbar-t-github-link">{{team_name}}</a>
-					<a href="#" target="_blank" class="navbar-item" id="navbar-o-github-link">Github(Organisation)</a>
-					<a href="" target="_blank" class="navbar-item" id="navbar-hacker-board-link">Hacker-Board</a>
-					<!--<a href="#devpost" target="_blank" class="navbar-item" id="navbar-devpost-link">DevPost</a>
-					<a href="#helpq" class="navbar-item" id="navbar-helpq-link">HELPq</a>
-					<a href="./mentors" class="navbar-item">Mentors</a> -->
-					<a href="./rules/" class="navbar-item">Rules</a>
-					<a href="./schedule/" class="navbar-item">Schedule</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
+<nav class="navbar" style="background: #eee;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+        <span class="icon-bar" style="background-color: #23527c;"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#"><img id="logo" src=""></a> -->
+      <a class="navbar-brand" href="index.html" id="logo"><img src="{% static 'img/ttlogo.png' %}" id="logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a target="_blank" href="{{team_repo}}">{{team_name}}</a></li>
+        <li><a target="_blank" href="#">GitHub (Organisation)</a></li>
+        <li><a target="_blank" href="#">Hacker Board</a></li>
+        <li><a href="./rules/">Rules</a></li>
+        <li><a href="./schedule/">Schedule</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
 <img src="{% static '/img/cover.jpg' %}" class="cover-img"/>
 <!--
 font-family: 'Roboto Condensed', sans-serif;

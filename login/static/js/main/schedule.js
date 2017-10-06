@@ -29,9 +29,9 @@ function getCurrentTimestamp(){
 	return mm.valueOf() + "-" + dd.valueOf() + "-" + yyyy.valueOf() + " " + hh.valueOf() + ":" + ii.valueOf() + ":" + ss.valueOf();
 }
 $(document).ready(function(){
-	var s = getCurrentTimestamp();
-	console.log(s);
-	console.log(schedule);
+	// var s = getCurrentTimestamp();
+	// console.log(s);
+	// console.log(schedule);
 
 	//s = "02-03-2017 23:05:00";
 

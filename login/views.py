@@ -7,11 +7,11 @@ from datetime import datetime
 
 # Create your views here.
 def schedule(request, waste_data):
-	schedules = Schedule.objects.all()
+	schedules = Schedule.objects.order_by('endTime')
 	return render(request, 'login/schedule.html', {"time": datetime.now().replace(microsecond=0), "list": schedules, "team_name": request.session['username'], "team_repo": request.session['github_repo']})
 
 def rules(request, waste_data):
-	return render(request, 'login/rules-and-guidelines.html', {"team_name": request.session['username'], "team_repo": request.session['github_repo']})
+	return render(request, 'login/rules-and-guidelines.html', {"time": datetime.now().replace(microsecond=0), "team_name": request.session['username'], "team_repo": request.session['github_repo']})
 
 def login(request):
 	if request.session.get('logged', False) == True:
@@ -53,9 +53,9 @@ def login(request):
 
 def home(request, id):
 	if(request.session['id'] == id):
-		schedules = Schedule.objects.all()
+		schedules = Schedule.objects.order_by('endTime')
 		announcements = Announcement.objects.all()
-		return render(request,'login/landing_page.html',{"announcements": announcements, "list": schedules, "title": "Home", "id": id, "team_name": request.session['username'], "team_repo": request.session['github_repo'], "username1": request.session['wifi_user_1'], "username2": request.session['wifi_user_2'], "password1": request.session['wifi_pass_1'], "password2": request.session['wifi_pass_2']})
+		return render(request,'login/landing_page.html',{"time": datetime.now().replace(microsecond=0), "announcements": announcements, "list": schedules, "title": "Home", "id": id, "team_name": request.session['username'], "team_repo": request.session['github_repo'], "username1": request.session['wifi_user_1'], "username2": request.session['wifi_user_2'], "password1": request.session['wifi_pass_1'], "password2": request.session['wifi_pass_2']})
 	else:
 		return redirect('/login/')
 
